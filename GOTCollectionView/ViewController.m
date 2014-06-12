@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GotModel.h"
 #import "Celda.h"
+#import "Casa.h"
 #import "Personaje.h"
 
 @interface ViewController () <UICollectionViewDataSource>
@@ -44,16 +45,22 @@
 
 #pragma mark UICollectionView Datasource
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return self.modelo.casas.count;
+}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.modelo.personajes.count;
+    Casa* casa = [self.modelo.casas objectAtIndex:section];
+    return casa.personajes.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     Celda* cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
     
-    Personaje* personaje = [self.modelo.personajes objectAtIndex:indexPath.row];
+    Casa* casa = [self.modelo.casas objectAtIndex:indexPath.section];
+    Personaje* personaje = [casa.personajes objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", personaje.imagen]];
     
     return cell;
