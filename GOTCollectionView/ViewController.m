@@ -12,6 +12,8 @@
 #import "Casa.h"
 #import "Personaje.h"
 #import "NombreCasaView.h"
+#import "LineLayout.h"
+#import "ZoomInLayout.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) GotModel* modelo;
@@ -20,6 +22,7 @@
 
 @property (nonatomic, strong) UICollectionViewFlowLayout* layoutVertical;
 @property (nonatomic, strong) UICollectionViewFlowLayout* layoutHorizontal;
+@property (nonatomic, strong) ZoomInLayout* zoomInLayout;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnTrash;
 @end
 
@@ -44,6 +47,9 @@
     self.layoutHorizontal.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
     self.layoutHorizontal.headerReferenceSize = CGSizeMake(200, 100);
     self.layoutHorizontal.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    //Line
+    self.zoomInLayout = [[ZoomInLayout alloc] init];
     
     self.selectedCells = [[NSMutableSet alloc] init];
     
@@ -71,6 +77,9 @@
             break;
         case 1:
             [self.collectionView setCollectionViewLayout:self.layoutHorizontal animated:YES];
+            break;
+        case 2:
+            [self.collectionView setCollectionViewLayout:self.zoomInLayout animated:YES];
             break;
         default:
             break;

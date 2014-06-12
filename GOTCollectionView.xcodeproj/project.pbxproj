@@ -61,6 +61,8 @@
 		8CC9570C194A444800BDD121 /* margaery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC9570B194A444800BDD121 /* margaery.jpg */; };
 		8CC9570F194A453200BDD121 /* NombreCasaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9570E194A453200BDD121 /* NombreCasaView.m */; };
 		8CC95711194A486C00BDD121 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC95710194A486C00BDD121 /* iPadStoryboard.storyboard */; };
+		8CC9571B194A630D00BDD121 /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9571A194A630D00BDD121 /* LineLayout.m */; };
+		8CC9571E194A6CD500BDD121 /* ZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9571D194A6CD500BDD121 /* ZoomInLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,10 @@
 		8CC9570D194A453200BDD121 /* NombreCasaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NombreCasaView.h; sourceTree = "<group>"; };
 		8CC9570E194A453200BDD121 /* NombreCasaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NombreCasaView.m; sourceTree = "<group>"; };
 		8CC95710194A486C00BDD121 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
+		8CC95719194A630D00BDD121 /* LineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineLayout.h; sourceTree = "<group>"; };
+		8CC9571A194A630D00BDD121 /* LineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineLayout.m; sourceTree = "<group>"; };
+		8CC9571C194A6CD500BDD121 /* ZoomInLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomInLayout.h; sourceTree = "<group>"; };
+		8CC9571D194A6CD500BDD121 /* ZoomInLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,10 @@
 				8CC9570D194A453200BDD121 /* NombreCasaView.h */,
 				8CC9570E194A453200BDD121 /* NombreCasaView.m */,
 				8CC95710194A486C00BDD121 /* iPadStoryboard.storyboard */,
+				8CC95719194A630D00BDD121 /* LineLayout.h */,
+				8CC9571A194A630D00BDD121 /* LineLayout.m */,
+				8CC9571C194A6CD500BDD121 /* ZoomInLayout.h */,
+				8CC9571D194A6CD500BDD121 /* ZoomInLayout.m */,
 			);
 			path = GOTCollectionView;
 			sourceTree = "<group>";
@@ -438,8 +448,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC9571B194A630D00BDD121 /* LineLayout.m in Sources */,
 				8CC95698194A3F3900BDD121 /* ViewController.m in Sources */,
 				8CC9570F194A453200BDD121 /* NombreCasaView.m in Sources */,
+				8CC9571E194A6CD500BDD121 /* ZoomInLayout.m in Sources */,
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
 				8CC95705194A3F9600BDD121 /* Casa.m in Sources */,
 				8CC95692194A3F3900BDD121 /* AppDelegate.m in Sources */,
