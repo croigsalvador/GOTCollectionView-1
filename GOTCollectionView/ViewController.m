@@ -16,6 +16,9 @@
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) GotModel* modelo;
 @property (nonatomic, strong) UICollectionView* collectionView;
+
+@property (nonatomic, strong) UICollectionViewFlowLayout* layoutVertical;
+@property (nonatomic, strong) UICollectionViewFlowLayout* layoutHorizontal;
 @end
 
 @implementation ViewController
@@ -27,13 +30,22 @@
     self.modelo = [[GotModel alloc] init];
     [self.modelo cargaModelo];
     
-    UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(200, 200);
-    layout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
-    layout.headerReferenceSize = CGSizeMake(100, 100);
+    //Vertical
+    self.layoutVertical = [[UICollectionViewFlowLayout alloc] init];
+    self.layoutVertical.itemSize = CGSizeMake(200, 200);
+    self.layoutVertical.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    self.layoutVertical.headerReferenceSize = CGSizeMake(100, 100);
+    
+    //Horizontal
+    self.layoutHorizontal = [[UICollectionViewFlowLayout alloc] init];
+    self.layoutHorizontal.itemSize = CGSizeMake(200, 200);
+    self.layoutHorizontal.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    self.layoutHorizontal.headerReferenceSize = CGSizeMake(200, 100);
+    self.layoutHorizontal.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.layoutVertical];
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     
@@ -46,6 +58,19 @@
     [super viewWillLayoutSubviews];
     
     self.collectionView.frame = self.view.bounds;
+}
+
+- (IBAction)cambioLayout:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            [self.collectionView setCollectionViewLayout:self.layoutVertical animated:YES];
+            break;
+        case 1:
+            [self.collectionView setCollectionViewLayout:self.layoutHorizontal animated:YES];
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark UICollectionView Datasource
