@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "GotModel.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) GotModel* modelo;
 @end
 
 @implementation ViewController
@@ -17,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.modelo = [[GotModel alloc] init];
+    [self.modelo cargaModelo];
 }
 
 - (void)didReceiveMemoryWarning
