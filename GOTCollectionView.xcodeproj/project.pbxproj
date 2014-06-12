@@ -13,7 +13,6 @@
 		8CC9568C194A3F3900BDD121 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CC9568A194A3F3900BDD121 /* InfoPlist.strings */; };
 		8CC9568E194A3F3900BDD121 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9568D194A3F3900BDD121 /* main.m */; };
 		8CC95692194A3F3900BDD121 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC95691194A3F3900BDD121 /* AppDelegate.m */; };
-		8CC95695194A3F3900BDD121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC95693194A3F3900BDD121 /* Main.storyboard */; };
 		8CC95698194A3F3900BDD121 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC95697194A3F3900BDD121 /* ViewController.m */; };
 		8CC9569A194A3F3900BDD121 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC95699194A3F3900BDD121 /* Images.xcassets */; };
 		8CC956A1194A3F3900BDD121 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC956A0194A3F3900BDD121 /* XCTest.framework */; };
@@ -60,6 +59,8 @@
 		8CC95707194A3F9600BDD121 /* Personaje.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC956E1194A3F9600BDD121 /* Personaje.m */; };
 		8CC9570A194A42EC00BDD121 /* Celda.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC95709194A42EC00BDD121 /* Celda.m */; };
 		8CC9570C194A444800BDD121 /* margaery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC9570B194A444800BDD121 /* margaery.jpg */; };
+		8CC9570F194A453200BDD121 /* NombreCasaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC9570E194A453200BDD121 /* NombreCasaView.m */; };
+		8CC95711194A486C00BDD121 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC95710194A486C00BDD121 /* iPadStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +84,6 @@
 		8CC9568F194A3F3900BDD121 /* GOTCollectionView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GOTCollectionView-Prefix.pch"; sourceTree = "<group>"; };
 		8CC95690194A3F3900BDD121 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8CC95691194A3F3900BDD121 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8CC95694194A3F3900BDD121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CC95696194A3F3900BDD121 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8CC95697194A3F3900BDD121 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8CC95699194A3F3900BDD121 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -135,6 +135,9 @@
 		8CC95708194A42EC00BDD121 /* Celda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Celda.h; sourceTree = "<group>"; };
 		8CC95709194A42EC00BDD121 /* Celda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Celda.m; sourceTree = "<group>"; };
 		8CC9570B194A444800BDD121 /* margaery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = margaery.jpg; sourceTree = "<group>"; };
+		8CC9570D194A453200BDD121 /* NombreCasaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NombreCasaView.h; sourceTree = "<group>"; };
+		8CC9570E194A453200BDD121 /* NombreCasaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NombreCasaView.m; sourceTree = "<group>"; };
+		8CC95710194A486C00BDD121 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,13 +201,15 @@
 				8CC956DB194A3F9600BDD121 /* modelo */,
 				8CC95690194A3F3900BDD121 /* AppDelegate.h */,
 				8CC95691194A3F3900BDD121 /* AppDelegate.m */,
-				8CC95693194A3F3900BDD121 /* Main.storyboard */,
 				8CC95696194A3F3900BDD121 /* ViewController.h */,
 				8CC95697194A3F3900BDD121 /* ViewController.m */,
 				8CC95699194A3F3900BDD121 /* Images.xcassets */,
 				8CC95688194A3F3900BDD121 /* Supporting Files */,
 				8CC95708194A42EC00BDD121 /* Celda.h */,
 				8CC95709194A42EC00BDD121 /* Celda.m */,
+				8CC9570D194A453200BDD121 /* NombreCasaView.h */,
+				8CC9570E194A453200BDD121 /* NombreCasaView.m */,
+				8CC95710194A486C00BDD121 /* iPadStoryboard.storyboard */,
 			);
 			path = GOTCollectionView;
 			sourceTree = "<group>";
@@ -396,7 +401,7 @@
 				8CC95701194A3F9600BDD121 /* tywin.jpg in Resources */,
 				8CC956F0194A3F9600BDD121 /* jon.jpg in Resources */,
 				8CC956EC194A3F9600BDD121 /* edmure.jpg in Resources */,
-				8CC95695194A3F3900BDD121 /* Main.storyboard in Resources */,
+				8CC95711194A486C00BDD121 /* iPadStoryboard.storyboard in Resources */,
 				8CC95704194A3F9600BDD121 /* personajes.json in Resources */,
 				8CC956EB194A3F9600BDD121 /* eddard.jpg in Resources */,
 				8CC9570C194A444800BDD121 /* margaery.jpg in Resources */,
@@ -434,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC95698194A3F3900BDD121 /* ViewController.m in Sources */,
+				8CC9570F194A453200BDD121 /* NombreCasaView.m in Sources */,
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
 				8CC95705194A3F9600BDD121 /* Casa.m in Sources */,
 				8CC95692194A3F3900BDD121 /* AppDelegate.m in Sources */,
@@ -468,14 +474,6 @@
 				8CC9568B194A3F3900BDD121 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8CC95693194A3F3900BDD121 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CC95694194A3F3900BDD121 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		8CC956A9194A3F3900BDD121 /* InfoPlist.strings */ = {

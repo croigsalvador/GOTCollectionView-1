@@ -11,8 +11,9 @@
 #import "Celda.h"
 #import "Casa.h"
 #import "Personaje.h"
+#import "NombreCasaView.h"
 
-@interface ViewController () <UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) GotModel* modelo;
 @property (nonatomic, strong) UICollectionView* collectionView;
 @end
@@ -28,12 +29,16 @@
     
     UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(200, 200);
+    layout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    layout.headerReferenceSize = CGSizeMake(100, 100);
+    
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     
     [self.collectionView registerClass:[Celda class] forCellWithReuseIdentifier:@"celda"];
+    [self.collectionView registerClass:[NombreCasaView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"nombreCasa"];
 }
 
 - (void)viewWillLayoutSubviews
@@ -65,4 +70,17 @@
     
     return cell;
 }
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    NombreCasaView* nombreCasaView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"nombreCasa" forIndexPath:indexPath];
+    
+    Casa* casa = [self.modelo.casas objectAtIndex:indexPath.section];
+    nombreCasaView.nombre.text = casa.nombre;
+    
+    return nombreCasaView;
+}
+
+
+
 @end
