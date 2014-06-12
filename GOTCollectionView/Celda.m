@@ -36,6 +36,17 @@
     self.imageView.frame = self.bounds;
 }
 
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    
+    if(selected)
+        self.imageView.alpha = .3;
+    else
+        self.imageView.alpha = 1.0;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

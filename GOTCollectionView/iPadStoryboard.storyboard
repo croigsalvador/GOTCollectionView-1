@@ -46,7 +46,15 @@
                                 <action selector="cambioLayout:" destination="UgS-3W-DgN" eventType="valueChanged" id="lxp-z8-af6"/>
                             </connections>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="vDe-fK-c98">
+                            <connections>
+                                <action selector="btnTrahsPressed:" destination="UgS-3W-DgN" id="eIk-P9-0Gf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnTrash" destination="vDe-fK-c98" id="ofi-ZE-lVh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEf-CY-Lfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

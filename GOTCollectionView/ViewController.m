@@ -13,12 +13,14 @@
 #import "Personaje.h"
 #import "NombreCasaView.h"
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) GotModel* modelo;
 @property (nonatomic, strong) UICollectionView* collectionView;
+@property (nonatomic, strong) NSMutableSet* selectedCells;
 
 @property (nonatomic, strong) UICollectionViewFlowLayout* layoutVertical;
 @property (nonatomic, strong) UICollectionViewFlowLayout* layoutHorizontal;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnTrash;
 @end
 
 @implementation ViewController
@@ -38,15 +40,17 @@
     
     //Horizontal
     self.layoutHorizontal = [[UICollectionViewFlowLayout alloc] init];
-    self.layoutHorizontal.itemSize = CGSizeMake(200, 200);
+    self.layoutHorizontal.itemSize = CGSizeMake(100, 300);
     self.layoutHorizontal.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
     self.layoutHorizontal.headerReferenceSize = CGSizeMake(200, 100);
     self.layoutHorizontal.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
-    
+    self.selectedCells = [[NSMutableSet alloc] init];
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.layoutVertical];
     self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    self.collectionView.allowsMultipleSelection = YES;
     [self.view addSubview:self.collectionView];
     
     [self.collectionView registerClass:[Celda class] forCellWithReuseIdentifier:@"celda"];
@@ -72,6 +76,30 @@
             break;
     }
 }
+
+- (IBAction)btnTrahsPressed:(id)sender {
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView deleteItemsAtIndexPaths:self.selectedCells.allObjects];
+
+        for (int c = 0; c<self.modelo.casas.count; c++) {
+            NSMutableIndexSet* indexSet = [[NSMutableIndexSet alloc] init];
+            for (NSIndexPath* indexPath in self.selectedCells) {
+                if(indexPath.section==c)
+                    [indexSet addIndex:indexPath.row];
+            }
+            
+            Casa* casa = [self.modelo.casas objectAtIndex:c];
+            NSMutableArray *auxPersonajes = casa.personajes.mutableCopy;
+            [auxPersonajes removeObjectsAtIndexes:indexSet];
+            casa.personajes = auxPersonajes.copy;
+
+        }
+        
+        self.selectedCells = [[NSMutableSet alloc] init];
+
+    } completion:nil];
+}
+
 
 #pragma mark UICollectionView Datasource
 
@@ -106,6 +134,15 @@
     return nombreCasaView;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.selectedCells addObject:indexPath];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.selectedCells removeObject:indexPath];
+}
 
 
 @end
