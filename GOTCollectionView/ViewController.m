@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "GotModel.h"
+#import "Celda.h"
+#import "Personaje.h"
 
 @interface ViewController () <UICollectionViewDataSource>
 @property (nonatomic, strong) GotModel* modelo;
@@ -24,13 +26,13 @@
     [self.modelo cargaModelo];
     
     UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(100, 100);
+    layout.itemSize = CGSizeMake(200, 200);
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"celda"];
+    [self.collectionView registerClass:[Celda class] forCellWithReuseIdentifier:@"celda"];
 }
 
 - (void)viewWillLayoutSubviews
@@ -44,14 +46,15 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    return self.modelo.personajes.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell* cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
+    Celda* cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor redColor];
+    Personaje* personaje = [self.modelo.personajes objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", personaje.imagen]];
     
     return cell;
 }

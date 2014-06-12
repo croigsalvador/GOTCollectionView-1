@@ -40,7 +40,6 @@
 		8CC956F2194A3F9600BDD121 /* lancel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC956C8194A3F9500BDD121 /* lancel.jpg */; };
 		8CC956F3194A3F9600BDD121 /* loras.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC956C9194A3F9500BDD121 /* loras.jpg */; };
 		8CC956F4194A3F9600BDD121 /* lysa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC956CA194A3F9500BDD121 /* lysa.jpg */; };
-		8CC956F5194A3F9600BDD121 /* margaery.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC956CB194A3F9500BDD121 /* margaery.png */; };
 		8CC956F6194A3F9600BDD121 /* myrcella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC956CC194A3F9500BDD121 /* myrcella.jpg */; };
 		8CC956F7194A3F9600BDD121 /* olenna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC956CD194A3F9500BDD121 /* olenna.jpg */; };
 		8CC956F8194A3F9600BDD121 /* renly.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC956CE194A3F9500BDD121 /* renly.jpg */; };
@@ -59,6 +58,8 @@
 		8CC95705194A3F9600BDD121 /* Casa.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC956DD194A3F9600BDD121 /* Casa.m */; };
 		8CC95706194A3F9600BDD121 /* GotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC956DF194A3F9600BDD121 /* GotModel.m */; };
 		8CC95707194A3F9600BDD121 /* Personaje.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC956E1194A3F9600BDD121 /* Personaje.m */; };
+		8CC9570A194A42EC00BDD121 /* Celda.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC95709194A42EC00BDD121 /* Celda.m */; };
+		8CC9570C194A444800BDD121 /* margaery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CC9570B194A444800BDD121 /* margaery.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +111,6 @@
 		8CC956C8194A3F9500BDD121 /* lancel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lancel.jpg; sourceTree = "<group>"; };
 		8CC956C9194A3F9500BDD121 /* loras.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loras.jpg; sourceTree = "<group>"; };
 		8CC956CA194A3F9500BDD121 /* lysa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lysa.jpg; sourceTree = "<group>"; };
-		8CC956CB194A3F9500BDD121 /* margaery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = margaery.png; sourceTree = "<group>"; };
 		8CC956CC194A3F9500BDD121 /* myrcella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myrcella.jpg; sourceTree = "<group>"; };
 		8CC956CD194A3F9500BDD121 /* olenna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = olenna.jpg; sourceTree = "<group>"; };
 		8CC956CE194A3F9500BDD121 /* renly.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = renly.jpg; sourceTree = "<group>"; };
@@ -132,6 +132,9 @@
 		8CC956DF194A3F9600BDD121 /* GotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotModel.m; sourceTree = "<group>"; };
 		8CC956E0194A3F9600BDD121 /* Personaje.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personaje.h; sourceTree = "<group>"; };
 		8CC956E1194A3F9600BDD121 /* Personaje.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personaje.m; sourceTree = "<group>"; };
+		8CC95708194A42EC00BDD121 /* Celda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Celda.h; sourceTree = "<group>"; };
+		8CC95709194A42EC00BDD121 /* Celda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Celda.m; sourceTree = "<group>"; };
+		8CC9570B194A444800BDD121 /* margaery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = margaery.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				8CC95697194A3F3900BDD121 /* ViewController.m */,
 				8CC95699194A3F3900BDD121 /* Images.xcassets */,
 				8CC95688194A3F3900BDD121 /* Supporting Files */,
+				8CC95708194A42EC00BDD121 /* Celda.h */,
+				8CC95709194A42EC00BDD121 /* Celda.m */,
 			);
 			path = GOTCollectionView;
 			sourceTree = "<group>";
@@ -264,7 +269,7 @@
 				8CC956C8194A3F9500BDD121 /* lancel.jpg */,
 				8CC956C9194A3F9500BDD121 /* loras.jpg */,
 				8CC956CA194A3F9500BDD121 /* lysa.jpg */,
-				8CC956CB194A3F9500BDD121 /* margaery.png */,
+				8CC9570B194A444800BDD121 /* margaery.jpg */,
 				8CC956CC194A3F9500BDD121 /* myrcella.jpg */,
 				8CC956CD194A3F9500BDD121 /* olenna.jpg */,
 				8CC956CE194A3F9500BDD121 /* renly.jpg */,
@@ -372,7 +377,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC956F5194A3F9600BDD121 /* margaery.png in Resources */,
 				8CC956F7194A3F9600BDD121 /* olenna.jpg in Resources */,
 				8CC956F8194A3F9600BDD121 /* renly.jpg in Resources */,
 				8CC95702194A3F9600BDD121 /* viserys.jpg in Resources */,
@@ -395,6 +399,7 @@
 				8CC95695194A3F3900BDD121 /* Main.storyboard in Resources */,
 				8CC95704194A3F9600BDD121 /* personajes.json in Resources */,
 				8CC956EB194A3F9600BDD121 /* eddard.jpg in Resources */,
+				8CC9570C194A444800BDD121 /* margaery.jpg in Resources */,
 				8CC956ED194A3F9600BDD121 /* gendry.jpg in Resources */,
 				8CC956EA194A3F9600BDD121 /* daenerys.jpg in Resources */,
 				8CC956FE194A3F9600BDD121 /* theon.jpg in Resources */,
@@ -434,6 +439,7 @@
 				8CC95692194A3F3900BDD121 /* AppDelegate.m in Sources */,
 				8CC9568E194A3F3900BDD121 /* main.m in Sources */,
 				8CC95707194A3F9600BDD121 /* Personaje.m in Sources */,
+				8CC9570A194A42EC00BDD121 /* Celda.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
