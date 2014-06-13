@@ -43,6 +43,7 @@
                                 <segment title="Horizontal"/>
                                 <segment title="ZoomIn"/>
                                 <segment title="CoverFlow"/>
+                                <segment title="Custom"/>
                             </segments>
                             <connections>
                                 <action selector="cambioLayout:" destination="UgS-3W-DgN" eventType="valueChanged" id="lxp-z8-af6"/>
