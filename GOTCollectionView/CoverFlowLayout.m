@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Ricardo Sanchez. All rights reserved.
 //
 
-#import "LineLayout.h"
+#import "CoverFlowLayout.h"
 
 #define ACTIVE_DISTANCE 100
 #define TRANSLATE_DISTANCE 100
 #define ZOOM_FACTOR 0.3
 #define FLOW_OFFSET 40
 
-@implementation LineLayout
+@implementation CoverFlowLayout
 
 
 - (id)init {

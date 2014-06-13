@@ -12,7 +12,7 @@
 #import "Casa.h"
 #import "Personaje.h"
 #import "NombreCasaView.h"
-#import "LineLayout.h"
+#import "CoverFlowLayout.h"
 #import "ZoomInLayout.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -23,6 +23,8 @@
 @property (nonatomic, strong) UICollectionViewFlowLayout* layoutVertical;
 @property (nonatomic, strong) UICollectionViewFlowLayout* layoutHorizontal;
 @property (nonatomic, strong) ZoomInLayout* zoomInLayout;
+@property (nonatomic, strong) CoverFlowLayout* coverFlow;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnTrash;
 @end
 
@@ -50,6 +52,9 @@
     
     //Line
     self.zoomInLayout = [[ZoomInLayout alloc] init];
+
+    //Coverflow
+    self.coverFlow = [[CoverFlowLayout alloc] init];
     
     self.selectedCells = [[NSMutableSet alloc] init];
     
@@ -81,6 +86,9 @@
         case 2:
             [self.collectionView setCollectionViewLayout:self.zoomInLayout animated:YES];
             break;
+        case 3:
+            [self.collectionView setCollectionViewLayout:self.coverFlow animated:YES];
+            break;
         default:
             break;
     }
@@ -109,6 +117,18 @@
     } completion:nil];
 }
 
+#pragma mark WaterFallLayout Delegate
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(collectionViewLayout==self.waterFall) {
+        Casa* casa = [self.modelo.casas objectAtIndex:indexPath.section];
+        Personaje* personaje = [casa.personajes objectAtIndex:indexPath.row];
+        UIImage* image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", personaje.imagen]];
+        return image.size;
+    }
+    
+    return CGSizeMake(200, 200);
+}
 
 #pragma mark UICollectionView Datasource
 

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LineLayout : UICollectionViewFlowLayout
+@interface CoverFlowLayout : UICollectionViewFlowLayout
 
 @end

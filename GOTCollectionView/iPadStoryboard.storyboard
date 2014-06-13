@@ -36,12 +36,13 @@
                     <navigationItem key="navigationItem" id="aWn-yA-xEP">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="V8q-07-P95">
-                            <rect key="frame" x="231" y="7" width="307" height="30"/>
+                            <rect key="frame" x="179" y="7" width="411" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Vertical"/>
                                 <segment title="Horizontal"/>
                                 <segment title="ZoomIn"/>
+                                <segment title="CoverFlow"/>
                             </segments>
                             <connections>
                                 <action selector="cambioLayout:" destination="UgS-3W-DgN" eventType="valueChanged" id="lxp-z8-af6"/>
