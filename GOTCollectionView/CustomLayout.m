@@ -34,6 +34,11 @@
 
 #pragma mark - Layout
 
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
+{
+    return YES;
+}
+
 - (void)prepareLayout
 {
     NSMutableDictionary *cellLayoutInfo = [NSMutableDictionary dictionary];

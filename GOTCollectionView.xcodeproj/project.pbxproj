@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8C4AD37E194AC87000EEA332 /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AD37D194AC87000EEA332 /* CustomLayout.m */; };
+		8C4AD388194ACD8000EEA332 /* FRGWaterfallCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AD383194ACD8000EEA332 /* FRGWaterfallCollectionViewLayout.m */; };
+		8C4AD389194ACD8000EEA332 /* FRGWaterfallDecorationReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AD385194ACD8000EEA332 /* FRGWaterfallDecorationReusableView.m */; };
+		8C4AD38A194ACD8000EEA332 /* FRGWaterfallHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AD387194ACD8000EEA332 /* FRGWaterfallHeaderReusableView.m */; };
 		8CC95682194A3F3900BDD121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC95681194A3F3900BDD121 /* Foundation.framework */; };
 		8CC95684194A3F3900BDD121 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC95683194A3F3900BDD121 /* CoreGraphics.framework */; };
 		8CC95686194A3F3900BDD121 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC95685194A3F3900BDD121 /* UIKit.framework */; };
@@ -79,6 +82,12 @@
 /* Begin PBXFileReference section */
 		8C4AD37C194AC87000EEA332 /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
 		8C4AD37D194AC87000EEA332 /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
+		8C4AD382194ACD8000EEA332 /* FRGWaterfallCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRGWaterfallCollectionViewLayout.h; sourceTree = "<group>"; };
+		8C4AD383194ACD8000EEA332 /* FRGWaterfallCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRGWaterfallCollectionViewLayout.m; sourceTree = "<group>"; };
+		8C4AD384194ACD8000EEA332 /* FRGWaterfallDecorationReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRGWaterfallDecorationReusableView.h; sourceTree = "<group>"; };
+		8C4AD385194ACD8000EEA332 /* FRGWaterfallDecorationReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRGWaterfallDecorationReusableView.m; sourceTree = "<group>"; };
+		8C4AD386194ACD8000EEA332 /* FRGWaterfallHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRGWaterfallHeaderReusableView.h; sourceTree = "<group>"; };
+		8C4AD387194ACD8000EEA332 /* FRGWaterfallHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRGWaterfallHeaderReusableView.m; sourceTree = "<group>"; };
 		8CC9567E194A3F3900BDD121 /* GOTCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOTCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC95681194A3F3900BDD121 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8CC95683194A3F3900BDD121 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +185,12 @@
 		8C4AD37B194AC79100EEA332 /* layouts */ = {
 			isa = PBXGroup;
 			children = (
+				8C4AD382194ACD8000EEA332 /* FRGWaterfallCollectionViewLayout.h */,
+				8C4AD383194ACD8000EEA332 /* FRGWaterfallCollectionViewLayout.m */,
+				8C4AD384194ACD8000EEA332 /* FRGWaterfallDecorationReusableView.h */,
+				8C4AD385194ACD8000EEA332 /* FRGWaterfallDecorationReusableView.m */,
+				8C4AD386194ACD8000EEA332 /* FRGWaterfallHeaderReusableView.h */,
+				8C4AD387194ACD8000EEA332 /* FRGWaterfallHeaderReusableView.m */,
 				8CC95719194A630D00BDD121 /* CoverFlowLayout.h */,
 				8CC9571A194A630D00BDD121 /* CoverFlowLayout.m */,
 				8CC9571C194A6CD500BDD121 /* ZoomInLayout.h */,
@@ -468,10 +483,13 @@
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
 				8CC95705194A3F9600BDD121 /* Casa.m in Sources */,
 				8CC95692194A3F3900BDD121 /* AppDelegate.m in Sources */,
+				8C4AD389194ACD8000EEA332 /* FRGWaterfallDecorationReusableView.m in Sources */,
+				8C4AD38A194ACD8000EEA332 /* FRGWaterfallHeaderReusableView.m in Sources */,
 				8C4AD37E194AC87000EEA332 /* CustomLayout.m in Sources */,
 				8CC9568E194A3F3900BDD121 /* main.m in Sources */,
 				8CC95707194A3F9600BDD121 /* Personaje.m in Sources */,
 				8CC9570A194A42EC00BDD121 /* Celda.m in Sources */,
+				8C4AD388194ACD8000EEA332 /* FRGWaterfallCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

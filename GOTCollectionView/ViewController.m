@@ -15,8 +15,9 @@
 #import "CoverFlowLayout.h"
 #import "ZoomInLayout.h"
 #import "CustomLayout.h"
+#import "FRGWaterfallCollectionViewLayout.h"
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) GotModel* modelo;
 @property (nonatomic, strong) UICollectionView* collectionView;
 @property (nonatomic, strong) NSMutableSet* selectedCells;
@@ -26,6 +27,7 @@
 @property (nonatomic, strong) ZoomInLayout* zoomInLayout;
 @property (nonatomic, strong) CoverFlowLayout* coverFlow;
 @property (nonatomic, strong) CustomLayout* customLayout;
+@property (nonatomic, strong) FRGWaterfallCollectionViewLayout* waterFallLayout;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnTrash;
 @end
@@ -61,6 +63,12 @@
     //Custom
     self.customLayout = [[CustomLayout alloc] init];
     
+    //Waterfall
+    self.waterFallLayout = [[FRGWaterfallCollectionViewLayout alloc] init];
+    self.waterFallLayout.itemWidth = 140.0f;
+    self.waterFallLayout.topInset = 10.0f;
+    self.waterFallLayout.bottomInset = 10.0f;
+    self.waterFallLayout.stickyHeader = YES;
     
     
     self.selectedCells = [[NSMutableSet alloc] init];
@@ -99,6 +107,9 @@
         case 4:
             [self.collectionView setCollectionViewLayout:self.customLayout animated:YES];
             break;
+        case 5:
+            [self.collectionView setCollectionViewLayout:self.waterFallLayout animated:YES];
+            break;
             
         default:
             break;
@@ -128,8 +139,11 @@
     } completion:nil];
 }
 
-
-
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(FRGWaterfallCollectionViewLayout *)collectionViewLayout
+ heightForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
+}
 #pragma mark UICollectionView Datasource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
